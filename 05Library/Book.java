@@ -8,7 +8,7 @@ public class Book{
 	title = "also none";
 	ISBN = "still none";
     }
-    public void Book(String writer; String name; String ID){
+    public Book(String writer, String name, String ID){
 	author = writer;
 	title = name;
 	ISBN = ID;
@@ -34,7 +34,7 @@ public class Book{
 
     
     
-    public string toString(){
-	return "" + title + ", by" + author + "  ISBN: " + 
+    public String toString(){
+	return "" + title + ", by " + author + "  ISBN: " + ISBN;
     }
 }
