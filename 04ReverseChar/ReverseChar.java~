@@ -1,0 +1,16 @@
+public class ReverseChar{
+    private String data;
+
+    public ReverseChar(){
+	data = "abcdefghijklmnopqrstuvwxyz";
+    }
+
+    public ReverseChar(String info){
+	data = "";
+	for (int x = info.super.length - 1; x > -1; x--){
+	    data += info.subString(x,x+1);
+	}
+    }
+    public char charAt(int index){
+	return (char)data.substring(index,index+1);
+    }
