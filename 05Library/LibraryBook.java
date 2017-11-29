@@ -13,17 +13,21 @@ public abstract class LibraryBook extends Book implements Comparable<LibraryBook
 	callNumber = extraNumber;
     }
     public int compareTo(LibraryBook other){
-	if (getCallNumber.compareTo(other.getCallNumber)<0) { return -1}
-   	if (getCallNumber.compareTo(other.getCallNumber)>0) { return 1}
-	else {return 0}
+      if (getCallNumber().compareTo(other.getCallNumber())<0) {
+        return -1;
+      } else if (getCallNumber().compareTo(other.getCallNumber())>0) {
+        return 1;
+      } else {
+        return 0;
+      }
     }
     public abstract void checkout(String patron, String due);
 
     public abstract void returned();
 
-    public String circulationStatus();
+    public abstract String circulationStatus();
 
     public String toString(){
-	return super.toString + "  " + getCallNumber + "  "  + cirulationStatus();
+      return super.toString() + "  " + getCallNumber() + "  "  + circulationStatus();
     }
 }
