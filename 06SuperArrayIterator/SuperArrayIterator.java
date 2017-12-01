@@ -1,11 +1,9 @@
+import java.util.*;
+
 public class SuperArrayIterator implements Iterable<String[]>{
   private String[] data;
   private int size;
 
-  public String[] getData(){
-    return data;
-  }
-  
   public SuperArray(){
     data = new String[10];
     size = data.length;
@@ -18,6 +16,17 @@ public class SuperArrayIterator implements Iterable<String[]>{
     data = str;
     size = data.length;
   }
+
+    
+  public String[] getData(){
+    return data;
+  }
+  
+  public  Iterator<String[]> iterator(){
+    return new IterfiedArray(data,size);
+  }
+  
+  
   public void clear(){
     for (int i = 0; i < size; i ++){
 	    data[i] = null;
