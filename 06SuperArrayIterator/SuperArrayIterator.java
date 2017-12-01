@@ -4,15 +4,15 @@ public class SuperArrayIterator implements Iterable<String[]>{
   private String[] data;
   private int size;
 
-  public SuperArray(){
+  public SuperArrayIterator(){
     data = new String[10];
     size = data.length;
   }
-  public SuperArray(int startCapacity){
+  public SuperArrayIterator(int startCapacity){
     data = new String[startCapacity];
     size = data.length;
   }
-  public SuperArray(String[] str){
+  public SuperArrayIterator(String[] str){
     data = str;
     size = data.length;
   }
