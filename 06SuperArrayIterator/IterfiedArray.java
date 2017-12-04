@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class IterfiedArray extends SuperArrayIterator implements iterator{
+public class IterfiedArray extends SuperArrayIterator implements Iterator{
   private String[] data;
   private int size;
   private int index = 0;
@@ -17,7 +17,7 @@ public class IterfiedArray extends SuperArrayIterator implements iterator{
       System.exit(0);
     }
 
-    return data.get(index-1);
+    return data[index-1];
   }
 
   public boolean hasNext(){

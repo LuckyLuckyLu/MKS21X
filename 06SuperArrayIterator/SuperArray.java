@@ -1,32 +1,23 @@
-import java.util.*;
-
-public class SuperArrayIterator implements Iterable<String>{
+public class SuperArray{
   private String[] data;
   private int size;
 
-  public SuperArrayIterator(){
-    data = new String[10];
-    size = data.length;
-  }
-  public SuperArrayIterator(int startCapacity){
-    data = new String[startCapacity];
-    size = data.length;
-  }
-  public SuperArrayIterator(String[] str){
-    data = str;
-    size = data.length;
-  }
-
-    
   public String[] getData(){
     return data;
   }
   
-  public  Iterator<String> iterator(){
-    return new IterfiedArray(data,size);
+  public SuperArray(){
+    data = new String[10];
+    size = data.length;
   }
-  
-  
+  public SuperArray(int startCapacity){
+    data = new String[startCapacity];
+    size = data.length;
+  }
+  public SuperArray(String[] str){
+    data = str;
+    size = data.length;
+  }
   public void clear(){
     for (int i = 0; i < size; i ++){
 	    data[i] = null;
@@ -90,7 +81,7 @@ public class SuperArrayIterator implements Iterable<String>{
   }
 
   private void resize(){
-    String[] newSize = new String[size()+1];
+    String[] newSize = new String[2*size()];
     for (int x = 0; x < size(); x++){
 	    newSize[x] = data[x];
     }
