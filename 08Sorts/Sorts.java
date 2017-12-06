@@ -23,4 +23,10 @@ public class Sorts{
 	    swap(data,index,location);
 	}
     }
+    public static void insertionSort(int[] data){
+	for (int i = 0; i < data.length; i++){
+	    if(
+	       ){}
+	}
+    }
 }
