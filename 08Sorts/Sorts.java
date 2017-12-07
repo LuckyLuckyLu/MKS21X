@@ -24,12 +24,12 @@ public class Sorts{
     }
   }
   public static void insertionSort(int[] data){
-    for (int i = 0; i < data.length; i++){
-      int j = 1;
-      while (i + j != data.length && data[i] < data[i+j]){
-        j += 1;
+    for (int i = 1; i < data.length; i++){
+      int j = i;
+      while (j > 0 && data[j] < data[j-1]){
+	  swap(data,j,j-1);
+	  j -= 1;
       }
-      swap(data,i,j);
     }
   }
   public static void main(String[]args){
