@@ -53,19 +53,23 @@ public class Sorts{
   }
   
   public static void bubbleSort(int[] data){
+    int length = data.length;
     while (!isSorted(data)){
-      for (int i = 0; i < data.length-1; i++){
+      for (int i = 0; i < length-1; i++){
         if (data[i] > data[i+1]){
           swap(data,i,i+1);
         }
+        //System.out.println(Arrays.toString(data));
+        //System.out.println(length);
+        //stem.out.println(i);
       }
-      System.out.println(Arrays.toString(data));
+      length--;
     }
   }
-  public static void main(String[] args){
-    int[] data = {10,3,4,6,11,9};
-    System.out.println(Arrays.toString(data));
-    bubbleSort(data);
-    System.out.println(Arrays.toString(data));
-  }
+  //public static void main(String[] args){
+    //int[] data = {10,3,4,6,11,9};
+    //System.out.println(Arrays.toString(data));
+    //bubbleSort(data);
+    //System.out.println(Arrays.toString(data));
+  /}
 }
