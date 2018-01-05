@@ -23,7 +23,7 @@ public class SuperArrayIterator implements Iterable<String>{
   }
   
   public  Iterator<String> iterator(){
-    return new IterfiedArray(data,size);
+      return new IterfiedArray(data,size());
   }
   
   
@@ -32,16 +32,15 @@ public class SuperArrayIterator implements Iterable<String>{
 	    data[i] = null;
     }
   }
-  public int size(){
-    int sz = 0;
-    for (int x = 0; x < data.length; x++){
+    public int size(){
+	int sz = 0;
+	for (int x = 0; x < data.length; x++){
 	    if (data[x] != null){
-        sz += 1;
+		sz += 1;
 	    }
+	}
+	return sz;
     }
-    return sz;
-  }
-
   public boolean isEmpty(){
     if (size() == 0){
 	    return true;
