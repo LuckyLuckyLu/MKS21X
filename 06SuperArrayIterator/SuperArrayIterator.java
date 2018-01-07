@@ -6,15 +6,15 @@ public class SuperArrayIterator implements Iterable<String>{
 
   public SuperArrayIterator(){
     data = new String[10];
-    size = data.length;
+    size = size();
   }
   public SuperArrayIterator(int startCapacity){
     data = new String[startCapacity];
-    size = data.length;
+    size = size();
   }
   public SuperArrayIterator(String[] str){
     data = str;
-    size = data.length;
+    size = size();
   }
 
     
@@ -23,7 +23,7 @@ public class SuperArrayIterator implements Iterable<String>{
   }
   
   public  Iterator<String> iterator(){
-      return new IterfiedArray(data,size());
+    return new IterfiedArray(data,size);
   }
   
   

@@ -15,13 +15,12 @@ public class IterfiedArray extends SuperArrayIterator implements Iterator{
       index ++;
     }else{
       System.exit(0);
-    }
-
+      }
     return data[index-1];
   }
 
   public boolean hasNext(){
-    return index <= size;
+    return index < size;
   }
 
 }

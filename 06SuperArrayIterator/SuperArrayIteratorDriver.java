@@ -14,9 +14,10 @@ public class SuperArrayIteratorDriver{
       System.out.print(data.get(n)+" ");
     }
     System.out.println();
+    System.out.println("Data: " + data);
     System.out.println("for-each loop:");
     for(String s : data){
-      System.out.print(s+" ");
+      System.out.print(s +" ");
     }
   }
 }
