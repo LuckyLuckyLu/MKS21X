@@ -1,38 +1,46 @@
-public class SuperArray{
+import java.util.*;
+
+public class SuperArray implements Iterable<String>{
   private String[] data;
   private int size;
 
+  public SuperArray(){
+    data = new String[10];
+    size = size();
+  }
+  public SuperArray(int startCapacity){
+    data = new String[startCapacity];
+    size = size();
+  }
+  public SuperArray(String[] str){
+    data = str;
+    size = size();
+  }
+
+    
   public String[] getData(){
     return data;
   }
   
-  public SuperArray(){
-    data = new String[10];
-    size = data.length;
+  public  Iterator<String> iterator(){
+    return new IterfiedArray(data,size);
   }
-  public SuperArray(int startCapacity){
-    data = new String[startCapacity];
-    size = data.length;
-  }
-  public SuperArray(String[] str){
-    data = str;
-    size = data.length;
-  }
+  
+  
   public void clear(){
     for (int i = 0; i < size; i ++){
 	    data[i] = null;
     }
   }
-  public int size(){
-    int sz = 0;
-    for (int x = 0; x < data.length; x++){
+    public int size(){
+	int sz = 0;
+	for (int x = 0; x < data.length; x++){
 	    if (data[x] != null){
-        sz += 1;
+		sz += 1;
 	    }
+	}
+	return sz;
     }
-    return sz;
-  }
-
   public boolean isEmpty(){
     if (size() == 0){
 	    return true;
@@ -81,7 +89,7 @@ public class SuperArray{
   }
 
   private void resize(){
-    String[] newSize = new String[2*size()];
+    String[] newSize = new String[size()+1];
     for (int x = 0; x < size(); x++){
 	    newSize[x] = data[x];
     }

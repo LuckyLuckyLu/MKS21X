@@ -9,7 +9,7 @@ public class ReferenceBook extends LibraryBook{
     collection = place;
   }
   public void checkout(String patron, String due){
-    System.out.println(" We apologize, reference books cannot be checked out");
+    System.out.println(" We apologize, " + patron + ", reference books cannot be checked out");
   }
   public void returned(){
     System.out.println(" Impossible. The reference book will foreverly remain here. BWAHAHA!");

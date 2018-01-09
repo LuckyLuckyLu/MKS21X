@@ -1,11 +1,11 @@
-public class ReverseCharSequence implements CharSequence{
+public class ReversedCharSequence implements CharSequence{
     private String data;
 
-    public ReverseCharSequence(){
+    public ReversedCharSequence(){
 	data = "abcdefghijklmnopqrstuvwxyz";
     }
 
-    public ReverseCharSequence(String info){
+    public ReversedCharSequence(String info){
 	data = "";
 	for (int x = info.length() - 1; x >= 0; x--) {
 	    if (x == info.length() - 1){
@@ -16,7 +16,7 @@ public class ReverseCharSequence implements CharSequence{
 	}
     }
 
-    public String getData(){
+    public String toString(){
 	return data;
     }
 
